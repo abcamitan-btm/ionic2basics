@@ -1,4 +1,4 @@
-import { Component,OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import {NavParams} from "ionic-angular";
 
 @Component({
@@ -10,9 +10,13 @@ export class UserPage implements OnInit{
     
     name: string;
 
-    constructor (private navParams: NavParams){}
+    constructor(private navParams: NavParams){}
 
     ngOnInit(){
         this.name = this.navParams.get('userName');
+    }
+
+    onGoBack(){
+        
     }
 }

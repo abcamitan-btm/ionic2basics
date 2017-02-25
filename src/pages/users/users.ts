@@ -8,7 +8,7 @@ import {UserPage} from "../users/user/user";
 })
 export class UsersPage {
 
-  constructor (private navCtrl: NavController){}
+  constructor(private navCtrl: NavController){}
   
   onLoadUser(name: string){
       this.navCtrl.push(UserPage, {userName: name});
