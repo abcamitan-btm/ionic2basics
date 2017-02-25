@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import {NavParams} from "ionic-angular";
+import {NavParams , NavController} from "ionic-angular";
 
 @Component({
     selector: 'page-user',
@@ -10,13 +10,14 @@ export class UserPage implements OnInit{
     
     name: string;
 
-    constructor(private navParams: NavParams){}
+    constructor(private navParams: NavParams,private navCtrl: NavController){}
 
     ngOnInit(){
         this.name = this.navParams.get('userName');
     }
 
     onGoBack(){
-        
+        this.navCtrl.pop(); //back to previous screen, remove/pop the current screen
+        //this.navCtrl.popToRoot(); //back to root page, remove all pages except root page
     }
 }
